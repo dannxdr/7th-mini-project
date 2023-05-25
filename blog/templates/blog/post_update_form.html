@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block style %}
+  <title>Update Post - Blog</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+{% endblock %}
+
+{% block content %}
+<button onclick="location.href='/blog/'" type="button" class="btn btn-outline-primary">HOME</button>
+<h3 class="title">Edit Post</h3>
+<hr/> 
+<form class="form_write" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <table>
+
+    {{ form|crispy }}
+  </table>
+  <button type="submit" class="btn btn-primary btn-lg">submit</button>
+</form>
+{% endblock %}

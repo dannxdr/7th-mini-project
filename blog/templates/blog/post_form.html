@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block style %}
+    <script src="https://kit.fontawesome.com/a26bf7fb44.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <title>Create Post - Blog</title>
+{% endblock %}
+
+{% block content %}
+  <button onclick="location.href='/blog/'" type="button" class="btn btn-outline-primary">HOME</button>
+  <h3 class="title">Create a New Post</h3>
+  <hr/>
+  <form class="form_write" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <table>
+
+        {{ form|crispy }}
+      </table>
+      <button type="submit" class="btn btn-primary btn-lg">submit</button>
+  </form>
+{% endblock %}

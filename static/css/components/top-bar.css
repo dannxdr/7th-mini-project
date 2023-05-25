@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* 상단바 스타일 */
+.navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-logo {
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-right: 10px;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+/* 활성 메뉴 스타일 */
+.active {
+  background-color: #2c2e2e;
+}/*# sourceMappingURL=top-bar.css.map */

@@ -1,0 +1,969 @@
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+textarea {
+  all: unset;
+}
+
+.about-section {
+  text-align: center;
+  margin-bottom: 0px;
+  padding: 50px;
+}
+
+.about-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-content {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.team-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.team-member {
+  margin: 10px;
+  width: calc(25% - 20px);
+  padding: 30px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team-member-name {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.team-member-role {
+  margin-top: 5px;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+body {
+  background: white;
+}
+
+#footer {
+  position: unset;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: white;
+  height: 200px;
+  width: 100vw;
+  font-family: "Open Sans";
+  padding-top: 30px;
+  color: black;
+}
+#footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+#footer .footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+#footer .footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+#footer .footer-bottom {
+  background: #000;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+#footer .footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+#footer .footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
+#footer .github-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+}
+#footer .gitlink {
+  color: black;
+  text-decoration: none;
+}
+#footer .gitlink:hover {
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* 상단바 스타일 */
+.navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-logo {
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-right: 10px;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+/* 활성 메뉴 스타일 */
+.active {
+  background-color: #2c2e2e;
+}
+
+.title {
+  text-align: center;
+}
+
+.form_write {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.btn btn-outline-primary {
+  margin: 10px;
+  padding: 10px;
+}
+
+.chat__main {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+}
+.chat__main .chat__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 20%;
+  min-width: 260px;
+  height: 100%;
+  background-color: #B0DEE1;
+}
+.chat__main .chat__aside .aside__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 45px;
+  margin-top: 30px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+}
+.chat__main .chat__aside .aside__wrapper:hover {
+  cursor: pointer;
+}
+.chat__main .chat__aside .aside__wrapper i {
+  margin-right: 10px;
+}
+.chat__main .chat__aside .new-chat__wrapper {
+  background-color: #19BEC9;
+  color: #fff;
+}
+.chat__main .chat__aside .new-chat__wrapper:hover {
+  background-color: #13939C;
+}
+.chat__main .chat__aside .chat-list__wrapper {
+  background-color: #F3F5F9;
+}
+.chat__main .chat__aside .chat-list__wrapper .chat-list__text {
+  font-size: 0.8rem;
+}
+
+.chat__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 80%;
+}
+.chat__section .chat__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: end;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 30px 50px 30px;
+  box-sizing: border-box;
+}
+.chat__section .chat__profile-img {
+  width: 50px;
+  height: 50px;
+}
+.chat__section .speech-bubble {
+  position: relative;
+  border-radius: 0.4em;
+  width: 60%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.chat__section .speech-bubble p {
+  margin: 0;
+  padding: 20px 5px;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.chat__section .speech-bubble--image {
+  margin-left: 40px;
+}
+.chat__section .speech-bubble--gpt {
+  background: #B0DEE1;
+  margin-left: 40px;
+}
+.chat__section .speech-bubble--gpt:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 60%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right-color: #B0DEE1;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+.chat__section .speech-bubble__sizedbox {
+  width: 30%;
+}
+.chat__section .speech-bubble--user {
+  background: #F3F5F9;
+  margin-right: 10%;
+}
+.chat__section .speech-bubble--user:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 60%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-left-color: #F3F5F9;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+.chat__section .question__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chat__section .question__form .question-radio__wrapper {
+  display: flex;
+}
+.chat__section .question__form .question-textarea__wrapper {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid #F3F5F9;
+  box-shadow: 0 0 10px #F3F5F9;
+}
+.chat__section .question__form .question-textarea__wrapper .question__textarea {
+  position: relative;
+  width: 100%;
+  height: 1.2em;
+  padding: 5px 20px;
+  font-size: 1em;
+  box-sizing: content-box;
+}
+.chat__section .question__form .question-textarea__wrapper .question__btn {
+  border: none;
+  background-color: #fff;
+  color: #19BEC9;
+  cursor: pointer;
+}
+.chat__section .question__form .question-textarea__wrapper .question__btn:disabled {
+  color: #F3F5F9;
+  cursor: none;
+}
+.chat__section .question__form .question-textarea__wrapper .question__btn:disabled:hover {
+  color: #F3F5F9;
+}
+.chat__section .question__form .question-textarea__wrapper .question__btn:hover {
+  color: #13939C;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.one-box {
+  background-color: #FFFFFF;
+  padding: 20px;
+  padding-left: 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.chat-container.left {
+  justify-content: flex-start;
+}
+
+.chat-container.right {
+  justify-content: flex-end;
+}
+
+.chat-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #333333;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.chat-input {
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #333333;
+  border-radius: 20px;
+  width: 100%;
+  resize: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.chat-button {
+  background-color: #333333;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  outline: none;
+}
+
+.chat-response {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  margin-left: 0px;
+  max-width: 50%;
+  text-align: left;
+}
+
+.chat-response-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #333333;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+#AddQ {
+  background-color: #B0DEE1;
+  padding: 10px 40px;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 700px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 20px auto;
+  align-items: center;
+  border: none;
+}
+
+#AddQ:hover {
+  background-color: #19BEC9;
+  color: white;
+  opacity: 1;
+}
+
+button {
+  margin: auto;
+  display: block;
+}
+
+/* index.html 꾸미는 부분 */
+.AddBtn, #GoHome, #SubmitBtn {
+  background-color: #B0DEE1;
+  padding: 10px 40px;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 700px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 20px auto;
+  align-items: center;
+  border: none;
+}
+
+.AddBtn:hover, #SubmitBtn:hover, #GoHome:hover {
+  background-color: #19BEC9; /* Green */
+  color: white;
+  opacity: 1;
+}
+
+.AddFile {
+  /* transition: .5s ease; */
+  opacity: 0;
+  border: 1px dashed black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+fieldset {
+  margin: 20px auto;
+  position: relative;
+  background-color: #F3F5F9;
+  color: black;
+  border-radius: 12px;
+  /* border: 1px dashed black; */
+  /* height: 250px; */
+  width: 80%;
+  background-size: 250px 250px;
+  max-width: 700px;
+  text-align: center;
+}
+
+#explanation {
+  display: none;
+  position: relative;
+  width: auto;
+  margin: auto;
+}
+
+fieldset:hover .AddFile {
+  opacity: 1;
+}
+
+fieldset:hover #explanation {
+  display: block;
+}
+
+fieldset:hover + .AddFile {
+  display: contents;
+}
+
+button, #SubmitBtn {
+  margin: auto;
+  display: block;
+}
+
+#preview {
+  margin: auto;
+}
+
+/* style.css */
+/* 전체 페이지 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+}
+
+/* 제목과 내용 스타일 */
+header h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+header h6 {
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* 이미지 스타일 */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figure {
+  text-align: center;
+}
+
+.content {
+  border: 1px solid #000;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+/* 다운로드 버튼 스타일 */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: hsla(211, 73%, 53%, 0.925);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #3a89dd;
+}
+
+.btn .fa-regular,
+.btn .fa-solid {
+  margin-right: 5px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* post_list.html 부분 */
+.post_header {
+  margin-bottom: 20px;
+}
+
+.card-body {
+  position: relative;
+}
+
+.card-title {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card-date {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.card-content {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+    <title>Self Chat GPT</title>
+{% endblock %}
+
+{% block content %}
+<main class="chat__main">
+    <aside class="chat__aside">
+        <div class="new-chat__wrapper aside__wrapper">
+            <a class="new_chat__btn" href="{% url "selfchatgpt:index" %}">
+                <i class="fa-solid fa-plus"></i>
+                <span class="new_chat__text aside__text">새로운 채팅 생성</span>
+            </a>
+        </div>
+        <div class="chat-list__wrapper aside__wrapper">
+            <i class="fa-solid fa-comment"></i>
+            <span class="chat-list__text aside__text">너는 무엇을 할 수 있니??</span>
+        </div>
+    </aside>
+    <section class="chat__section" style="overflow:auto;">
+        <div class="chat__wrapper">
+            <img class="chat__profile-img" src="{% static 'images/chatgpt-icon.png' %}" alt="chat-gpt-icon">
+            <div class="speech-bubble speech-bubble--gpt">
+                <p class="speech-bubble__text">무엇을 도와드릴까요?</p>
+            </div>
+        </div> 
+        {% if context %}
+        <div class="chat__wrapper">
+            <div class="speech-bubble__sizedbox"></div>
+            <div class="speech-bubble speech-bubble--user">
+                <p class="speech-bubble__text">{{context.question}}</p>
+            </div>
+        </div>
+        <div class="chat__wrapper">
+            <img class="chat__profile-img" src="{% static 'images/chatgpt-icon.png' %}" alt="chat-gpt-icon">
+            <div class="speech-bubble speech-bubble--gpt">
+                <p class="speech-bubble__text">{{context.result}}</p>
+            </div>
+        </div> 
+        {% else %}
+        {% endif %}
+        <form method="post" action="{% url 'selfchatgpt:chat' %}" class="question__form">
+            {% csrf_token %}
+            <div class="question-radio__wrapper">
+                <div class = "question-radio__set">
+                    <label for="text-gen">텍스트 생성</label>
+                    <input id="text-gen" type="radio" name="question_type" value="text" checked>
+                </div>
+                <div class = "question-radio__set">
+                    <label for="image-gen">이미지 생성</label>
+                    <input id="image-gen" type="radio" name="question_type" value="image">
+                </div>
+            </div>
+            <div class="question-textarea__wrapper">
+                <textarea type="text" class="question__textarea" name="input_text" placeholder="Chat GPT에 요청할 텍스트를 입력하세요."></textarea>
+                <button disabled type="submit" class="question__btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </form>
+        {% comment %} Footer {% endcomment %}
+    </section>
+</main>
+<script src="{% static 'js/chat.js' %}"></script>
+<script src="https://kit.fontawesome.com/6682c71b2e.js" crossorigin="anonymous"></script>
+{% endblock %}

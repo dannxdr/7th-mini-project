@@ -1,0 +1,55 @@
+.about-section {
+  text-align: center;
+  margin-bottom: 0px;
+  padding: 50px;
+}
+
+.about-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-content {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.team-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.team-member {
+  margin: 10px;
+  width: calc(25% - 20px);
+  padding: 30px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team-member-name {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.team-member-role {
+  margin-top: 5px;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=about.css.map */

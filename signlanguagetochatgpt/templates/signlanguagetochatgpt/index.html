@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block style %}
+<script>
+    let idNum = 0;
+    function addFile(){
+        deepCopy();
+    }
+
+    function deepCopy()  {
+        // 'test' node 선택
+        const fileModule = document.getElementById('file-module-'+idNum);
+
+        // 노드 복사하기 (deep copy)
+        const newNode = fileModule.cloneNode(true);
+
+        console.log(newNode)
+
+        // 복사된 Node id 변경하기
+        idNum++;
+        newNode.id = 'file-module-' + idNum;
+
+        // 복사한 노드 붙여넣기
+        fileModule.after(newNode);
+
+        console.log(newNode)
+
+        /*******************추가*********************/
+        var childList = newNode.childNodes[1];
+        console.log(newNode.id);
+        // console.log(document.querySelector('.ImgView')[idNum].id);
+        // document.querySelector('.ImgView').id = 'preview-' + idNum
+        console.log(childList);
+        /****************************************/
+    }
+</script>
+
+<script>
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          let imgElement = input.parentElement.querySelector('.ImgView');
+          console.log('imgElement');
+          console.log(imgElement);
+          imgElement.src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      } else {
+        input.parentElement.querySelector('.ImgView').src = "";
+      }
+  }
+</script>
+
+{% endblock %}
+
+{% block content %}
+  <form action="chat" method="post" enctype="multipart/form-data" class = 'Upload'>
+      {% csrf_token %}
+      <span id="file-module-0">
+          <fieldset>
+              <legend><h1>파일 업로드</h1></legend>
+              <input name="files" type="file" class = 'AddFile' onchange="readURL(this)">
+              <br>
+              <img class='ImgView'/>
+              {% comment %} <img class='ImgView' /> {% endcomment %}
+              <div id='explanation'>수어 사진을 올려주세요</div>
+          </fieldset>
+      </span>
+      <button onclick="addFile()" type="button" class = "AddBtn">파일 추가 </button>
+      <div><input type="submit" value="ChatGPT에게 수어로 문의하기" id='SubmitBtn'
+         onClick="alert('작업 시간이 오래 걸릴 수 있습니다.\n작업 진행을 위해 확인 버튼을 눌러주세요.')"></div>
+  </form>
+  <div>
+      <button onclick="location.href='/'" id='GoHome'>메인화면으로</button>
+  </div>
+{% endblock %}
+

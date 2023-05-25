@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.111.3">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://kit.fontawesome.com/a26bf7fb44.js" crossorigin="anonymous"></script>
+
+        {% block style %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+              <div class="navbar-logo">
+                Sign Language translation
+              </div>
+              <ul class="navbar-menu">
+                <li><a href="{% url 'index' %}" class="{% if active == "home" %} active {% endif %}">Home</a></li>
+                <li><a href="{% url 'about' %}" class="{% if active == "about" %} active {% endif %}">About</a></li>
+                {% if request.user.is_authenticated %}
+                <li><a href="{% url 'blog:index' %}" class="{% if active == "blog" %} active {% endif %}">Blog</a></li>
+                {% else %}
+                <li><a href="{% url 'inout:login' %}" class="{% if active == "blog" %} active {% endif %}">Blog</a></li>
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                <li><a href="{% url 'inout:logout' %}" class="{% if active == "signup" %} active {% endif %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'inout:signup' %}" class="{% if active == "signup" %} active {% endif %}">Sign-up</a></li>
+                {% endif %}
+              </ul>
+            </nav>
+        </header>
+        {% block content %}
+        {% endblock %}
+        <footer id="footer">
+            <div>
+                <div class = "footer-content">
+                    <h4 class='mb-5'>7th project sign language translation</h4>
+        
+                        <div>
+                            <div>
+                                <a class='gitlink' href="https://github.com/cjkangme"><svg class="github-icon"><use xlink:href="#github"></use></svg>Kang changjin</a>
+                            </div>
+                            <div>
+                                <a class='gitlink' href="https://github.com/dannxdr"><svg class="github-icon"><use xlink:href="#github"></use></svg>Kim daneun</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <a class='gitlink' href="https://github.com/seung0313"><svg class="github-icon"><use xlink:href="#github"></use></svg>Kim seungeun</a>
+                            </div>
+                            <div>
+                                <a class='gitlink' href="https://github.com/joowhan"><svg class="github-icon"><use xlink:href="#github"></use></svg>Kim joowhan</a>
+                            </div>
+                            <div>
+                                <a class='gitlink' href="https://github.com/sangeun815"><svg class="github-icon"><use xlink:href="#github"></use></svg>Min sangeun</a>
+                            </div>
+                            <div>
+                                <a class='gitlink' href="https://github.com/SEOP-YOON"><svg class="github-icon"><use xlink:href="#github"></use></svg>Yoon jeongseop</a>
+                            </div>
+                            <div>
+                                <a class='gitlink' href="https://github.com/sooonzero"><svg class="github-icon"><use xlink:href="#github"></use></svg>Lee jaeyoung</a>
+                            </div>
+                        </div>
+        
+        
+        
+                </div>
+                <div style = "background-color : #fcfcfc">
+                    <p align = "center">7th mini-project &copy; 2023. developed by <span><b> KT Aivler 3rd 6반 24조</b></span></p>
+                </div><br>
+            </div>
+        </footer>
+    </body>
+
+</html>

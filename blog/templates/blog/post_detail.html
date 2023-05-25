@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+    <script src="https://kit.fontawesome.com/a26bf7fb44.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{{post.title}} - Blog</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <button onclick="location.href='/blog/'" type="button" class="btn btn-outline-primary">HOME</button>
+        <header>
+            {% if user.is_authenticated %}
+            <a class="btn btn-info float-right" href="/blog/update_post/{{post.pk}}" role="button">
+                <i class="fas fa-pen fa-shake"></i> Edit Post
+            </a>
+            {% endif %}
+            <h1>{{post.title}}</h1>
+            <h6>{{post.created_at}}</h6>
+        </header>
+
+        <figure class="mb-4">
+            {% if post.head_image %}
+            <img class="img-fluid rounded" src="{{post.head_image.url}}" alt="{{post.title}}의 head_image" />
+            {% else %}
+            <img class="img-fluid rounded" src="https://picsum.photos/seed/{{post.pk}}/800/200" alt="random image" />
+            {% endif %}
+        </figure>
+        
+        <div class="content">
+            <p>{{post.content}}</p>
+        </div>
+
+        {% if post.file_upload %}
+        <div class="download-section">
+            <a href="{{post.file_upload.url}}" class="btn" role="button" download>
+                Download: 
+                {% if post.get_file_ext == 'xlsx' or post.get_file_ext == 'xls' %}
+                <i class="fa-regular fa-file-excel fa-bounce"></i>
+                {% elif post.get_file_ext == 'docx' or post.get_file_ext == 'doc' %}
+                <i class="fa-regular fa-file-word fa-bounce"></i>
+                {% elif post.get_file_ext == 'csv' %}
+                <i class="fa-regular fa-file-csv fa-bounce"></i>
+                {% else %}
+                <i class="fa-solid fa-file fa-bounce"></i>
+                {% endif %}
+                {{post.get_file_name}}
+            </a>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}
+<!DOCTYPE html>

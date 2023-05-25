@@ -1,0 +1,15 @@
+// config
+@import "config/normalize.scss";
+@import "config/variables.scss";
+
+// components
+@import "components/about.scss";
+@import "components/footer.scss";
+@import "components/top-bar.scss";
+@import "components/form.scss";
+
+// screen
+@import "screens/chat.scss";
+@import "screens/chat_style.scss";
+@import "screens/signlanguagetochatgpt.scss";
+@import "screens/post_detail.scss";

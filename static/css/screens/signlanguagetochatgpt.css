@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* index.html 꾸미는 부분 */
+.AddBtn, #GoHome, #SubmitBtn {
+  background-color: #B0DEE1;
+  padding: 10px 40px;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 700px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 20px auto;
+  align-items: center;
+  border: none;
+}
+
+.AddBtn:hover, #SubmitBtn:hover, #GoHome:hover {
+  background-color: #19BEC9; /* Green */
+  color: white;
+  opacity: 1;
+}
+
+.AddFile {
+  /* transition: .5s ease; */
+  opacity: 0;
+  border: 1px dashed black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+fieldset {
+  margin: 20px auto;
+  position: relative;
+  background-color: #F3F5F9;
+  color: black;
+  border-radius: 12px;
+  /* border: 1px dashed black; */
+  /* height: 250px; */
+  width: 80%;
+  background-size: 250px 250px;
+  max-width: 700px;
+  text-align: center;
+}
+
+#explanation {
+  display: none;
+  position: relative;
+  width: auto;
+  margin: auto;
+}
+
+fieldset:hover .AddFile {
+  opacity: 1;
+}
+
+fieldset:hover #explanation {
+  display: block;
+}
+
+fieldset:hover + .AddFile {
+  display: contents;
+}
+
+button, #SubmitBtn {
+  margin: auto;
+  display: block;
+}
+
+#preview {
+  margin: auto;
+}/*# sourceMappingURL=signlanguagetochatgpt.css.map */

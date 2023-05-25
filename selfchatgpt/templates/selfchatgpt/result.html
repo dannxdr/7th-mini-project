@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Self Chat GPT | Result</title>
+</head>
+<body>
+    <h1>요청 결과</h1>
+    <main>
+        <form method="post" action="{% url 'selfchatgpt:chat' %}">
+            {% csrf_token %}
+            <textarea type="text" class="input_text" name="input_text" placeholder="Chat GPT에 요청할 텍스트를 입력하세요." value="{{question}}"></textarea>
+            <input type="submit" value="재요청">
+        </form>
+
+        <div class="result">
+            <h3 class="result__title">질문</h3>
+            <p class="question">{{question}}</p>
+            <h3 class="result__title">답변</h3>
+            {% if is_image %}
+            <img class="image" src="{{result}}" alt="{{question}}">
+            {% else %}
+            <p class="result">{{result}}</p>
+            {% endif %}
+    </main>
+</body>
+</html>

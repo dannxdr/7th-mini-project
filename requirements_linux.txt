@@ -1,0 +1,8 @@
+mlflow
+opencv-python
+Pillow
+Django
+tensorflow-cpu
+openai
+crispy-bootstrap4
+django-crispy-forms

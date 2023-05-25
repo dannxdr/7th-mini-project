@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<br><br>
+<div style="text-align: center;">
+  <h3>수어이미지를 사용하여 chatgpt와 대화</h3>
+</div>
+<br>
+
+<br><br><br><br>
+{% comment %} <div class="chat-response-icon">
+  <img src="https://cdn.kr.aving.net/news/photo/202305/1779390_704534_1454.png" alt="Icon" style="width: 50px; height: 50px;">
+</div> {% endcomment %}
+<div class="one-box">
+  <div class="chat-container left">
+    <div class="chat-response-icon">
+      <img src="https://cdn.kr.aving.net/news/photo/202305/1779390_704534_1454.png" alt="Icon" style="width: 50px; height: 50px;">
+    </div>
+    <div class="chat-response">
+      <span id="result">{{result}}</span>
+    </div>
+  </div>
+  <br><br><br><br>
+  <div class="chat-container right">
+    <div class="chat-bubble">
+      <label for="question">내가 요청한 수어</label>
+      <textarea id="question" name="question" class="chat-input">{{question}}</textarea>
+    </div>
+    <div class="chat-icon">
+      <img src="https://i.pinimg.com/564x/b6/0b/d6/b60bd69067ef8e5fa3f35f22fae9988c.jpg" alt="Icon" style="width: 50px; height: 50px;">
+    </div>
+  </div>
+  <div>
+    <button onclick="location.href='/signlanguagetochatgpt/'" id='AddQ'>추가 질문 하기</button>
+  </div>
+</div>
+<br><br><br><br><br>
+{% endblock %}
